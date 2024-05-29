@@ -14,3 +14,10 @@ docker run \
   -p $SERVICE_PORT:$SERVICE_PORT \
   nvcr.io/ohlfw0olaadg/ea-participants/nemo-retriever-embedding-microservice:24.04 \
   bin/web -p $SERVICE_PORT -c /model-checkpoint-path/$MODEL_NAME -g model_config_templates/${MODEL_ID}_template.yaml
+
+
+  curl -X "POST"   "http://51.124.97.12:8080/v1/embeddings"   -H 'accept: application/json'   -H 'Content-Type: application/json'   -d '{
+    "input": ["Hello"],
+    "model": "NV-Embed-QA-Mistral-7B",
+    "input_type": "query"
+}'
