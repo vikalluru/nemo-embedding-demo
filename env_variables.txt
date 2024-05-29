@@ -1,0 +1,6 @@
+MODEL_ID=NV-Embed-QA-Mistral-7B
+MODEL_NAME=nv-embed-qa-mistral-7b_v1
+HOSTNAME="0.0.0.0"
+SERVICE_PORT=8080
+CONTAINER_NAME="embedding-ms"
+
